@@ -1,5 +1,4 @@
-Hello CSC 320 Instructor, Project Marker
-Please read this document to understand
+Read this document to understand
 the assembly of this project.
 
 created by:
