@@ -16,8 +16,6 @@ This submission contains several files:
 	formulas.py -
 		This file is full of functions 
 		used in solution.py
-	README.txt -
-		this
 	Summary_Report.pdf
 		Summarizes tests and performance
 		information for the SAT solver.
