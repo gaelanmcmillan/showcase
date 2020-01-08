@@ -1,6 +1,0 @@
-gd d
-ga a gd
-gt t
-gs s gt
-gc c
-gb b gc
