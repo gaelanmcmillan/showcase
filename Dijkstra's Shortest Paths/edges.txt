@@ -1,0 +1,12 @@
+b y 1
+b z 2
+x c 1
+y c 2
+y d 1
+z d 2
+c t 1
+d t 2
+s a 1
+s b 2
+a x 1
+a y 2
