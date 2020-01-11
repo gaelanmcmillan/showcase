@@ -1,4 +1,4 @@
-gt t ga/gc
+gt t ga|gc
 gc c gb
 gb b
 ga a
