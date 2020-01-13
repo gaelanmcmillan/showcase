@@ -1,14 +1,19 @@
-# Each goal node location must be visited to stop the algorithm 
+# V 1.0 Each goal node location must be visited to stop the algorithm
+# V 1.1 Some goals require visiting only 1 of 2 or more locations
+# V 1.2 Some goals are optional 
 class GoalNode:
 	def __init__(self, id, l):
 		# identification
 		self.name = id
-		self.location = l
-		
+		self.location = l		
 		# list of postrequisite goals
 		self.post = []
 		# prerequisite goals
 		self.pre = []
+		self.isOptional = False
+		# for optional goals,
+		# cord contains the list of other goals i.e. a|b
+		self.cord = []
 	
 	# given a list of completed goals, is this goal now exterior
 	def isExterior(self, incompleteExt):
@@ -17,20 +22,26 @@ class GoalNode:
 				return False
 		return True
 
-# Originally, the plan was to make this class very light,
-# so I could replicate it to each BTNode.
-# Now, it is heavy, and the BTNode just stores a list of exterior nodes. 
+# Goals objects are not replicated for each BTNode.
+# the BTNode just stores a list of exterior nodes. 
 class Goals():
 	def __init__(self):
-			# list of exterior nodes
-			self.ext = []
+			self.ext = [] # This variable might be useless. *needs review
 			self.goalDict = {}
 
 	def makeGoalNode(self, current):
 		tok = current.split()
 		if(len(tok) == 2):
 			self.ext.append(tok[0])
+		# for each prerequisite token
 		for t in range(2, len(tok)):
+			# prerequisite goal_a OR goal_b is denoted with "goal_a|goal_b"
+			# any token could contain this key character: "|"
+			t_sub = tok[t].split('|')
+			for cor in t_sub:
+				self.goalDict[tok[0]].pre.append(cor)
+				self.goalDict[cor].post.append(tok[0])
+				self.goalDict[cor] # YIKES. Consider a different aproach...
 			# add the listed node to current line's prerequisites
 			self.goalDict[tok[0]].pre.append(tok[t])
 			# add the current node to listed node's postrequisites

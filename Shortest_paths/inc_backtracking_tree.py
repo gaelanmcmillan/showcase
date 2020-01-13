@@ -17,12 +17,23 @@ class BTNode():
 		self.parent = parent #BTNode
 		self.distance = distance #int
 	
-	# bypass the defaul call by reference	
+	# bypass the default call by reference
+	# remove self.goalName from the list
+	# also remove OR-functionality goals
+	# ~~~	
 	def newExtList(self, oldExt):
 		for i in oldExt:
 			if(i != self.goalName):
 				self.extGoalNames.append(i)
 	
+	# where parameter gd is a goal dictionary
+	def isComplete(self, gd):
+		allOptional = True
+		for n in extGoalNames:
+			if(not gd[n].isOptional):
+				allOptional = False
+		return allOptional
+
 class BTTree():
 	def __init__(self, start, goals, graph):
 		self.root = BTNode("__START__", start, None, 0)
@@ -80,8 +91,9 @@ class BTTree():
 	
 		# create a new BTNode for the candidate; copy the exterior goals from parent
 		next = BTNode(closestCandidate.gn, self.goals.goalDict[closestCandidate.gn].location, closestCandidate.p, closestCandidate.d)
-		# this function removes the current coal from ext list
+		# this function removes the current goal from ext list
 		next.newExtList(closestCandidate.p.extGoalNames)
+
 		#print("stepping...", next.extGoalNames)
 		#print("stepping...", closestCandidate.p.extGoalNames)
 		#print("stepping...", closestCandidate.gn)
@@ -96,7 +108,7 @@ class BTTree():
 		# check for completion
 		complete = False
 		self.steps += 1
-		if(next.extGoalNames == []):
+		if(next.isComplete(self.goals.goalDict)):
 			addDist = next.distance - next.parent.distance
 			msg = "STEP " + str(self.steps) + ":\nmove from " + next.parent.goalName + " to " + next.goalName + " for " + str(addDist) + ".\n"
 			msg += "Complete: No more exterior nodes in " + str(self.steps) + " steps."
