@@ -1,9 +1,0 @@
-# READ ME
-
-This project is based on Dijkstra's Shortest Path algorith (DSP) which is well known.
-I didn't use an efficient implementation of DSP that relies on min-heaps.
-For an optimized python implementation of DSP, search elsewhere.
-I made this implementation from memory because DSP is one of my favourite algorithms from school.
-
-This readme is incomplete and the project isn't currently running.
-Come back later for more details.
