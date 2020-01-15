@@ -29,7 +29,7 @@ class BTNode():
 	# where parameter gd is a goal dictionary
 	def isComplete(self, gd):
 		allOptional = True
-		for n in extGoalNames:
+		for n in self.extGoalNames:
 			if(not gd[n].isOptional):
 				allOptional = False
 		return allOptional
