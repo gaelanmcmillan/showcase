@@ -15,7 +15,8 @@ class GoalNode:
 		# cord contains the list of other goals i.e. a|b
 		self.cord = []
 	
-	# given a list of completed goals, is this goal now exterior
+	# ~~~
+	# given a list of completed goals, are prerequisites now satisfied? return T/F
 	def isExterior(self, incompleteExt):
 		for prereq in self.pre:
 			if(prereq in incompleteExt):
@@ -35,13 +36,21 @@ class Goals():
 			self.ext.append(tok[0])
 		# for each prerequisite token
 		for t in range(2, len(tok)):
-			# prerequisite goal_a OR goal_b is denoted with "goal_a|goal_b"
+			# prerequisite goals a OR b OR c is denoted by "a|b|c"
 			# any token could contain this key character: "|"
 			t_sub = tok[t].split('|')
+			# for each "or" goal in the token...
 			for cor in t_sub:
+				# add the orGoal to prerequisites of the node on this line
 				self.goalDict[tok[0]].pre.append(cor)
+				# add the node on this line to the postrequisites of the orGoal
 				self.goalDict[cor].post.append(tok[0])
-				self.goalDict[cor] # YIKES. Consider a different aproach...
+				# for each other orGoal...
+				for orGoalName in t_sub:
+					if(orGoalName is not cor):
+						# add the orGoal to the list of mutual goals, i.e. a|b|c are 3 mutual goals. 
+						self.goalDict[cor].cord.append(orGoalName)
+
 			# add the listed node to current line's prerequisites
 			self.goalDict[tok[0]].pre.append(tok[t])
 			# add the current node to listed node's postrequisites

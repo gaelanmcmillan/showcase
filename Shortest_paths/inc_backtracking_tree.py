@@ -11,12 +11,13 @@ class BTCandidate():
 
 class BTNode():
 	def __init__(self, goalName, loc, parent, distance):
-		self.goalName = goalName #string
-		self.location = loc#String
+		self.goalName = goalName # string
+		self.location = loc # String
 		self.extGoalNames = [] # list of strings
-		self.parent = parent #BTNode
-		self.distance = distance #int
-	
+		self.parent = parent # BTNode
+		self.distance = distance # int
+		# store a list of completed goals by name
+		self.completedGoals = []
 	# bypass the default call by reference
 	# remove self.goalName from the list
 	# also remove OR-functionality goals
@@ -44,11 +45,12 @@ class BTTree():
 		# each candidate needs a BTNode parent, goalnode name, and distance
 		# I created a new object called BTCandidate to store this
 		self.candidates = []
-		
+
 		# for results ~ printout number of expansions/selections
 		self.expansions = 0
 		self.steps = 0		
 	
+	# Creates BTCandidate objects and adds them to the list self.candidates
 	def expand(self):
 		# always expand before stepping.
 		# always expand the selected node.
@@ -58,7 +60,6 @@ class BTTree():
 		extGoalObjs = []
 		for gnn in self.selection.extGoalNames:
 			extGoalObjs.append(self.goals.goalDict[gnn])
-			
 		distanceDict = dijkstra.simulPaths(self.graph, extGoalObjs, self.selection.location)
 		
 		msg = "EXPANSION " + str(self.expansions) + ":\n"
@@ -77,7 +78,8 @@ class BTTree():
 			msg += c.gn + " from " + c.p.goalName + ": " + str(c.d-c.p.distance) + "\n"
 		#print(msg)
 		return
-		
+
+	# selects a new currentNode from self.candidates and creates a BTNode for it; checks for completion	
 	def step(self):
 		# find the candidate with the shortest distance
 		minDist = math.inf
@@ -88,7 +90,9 @@ class BTTree():
 		
 		# remove the found candidate from the candidate list
 		self.candidates.remove(closestCandidate)
-	
+
+		# add the candidate to the list of completed goals
+
 		# create a new BTNode for the candidate; copy the exterior goals from parent
 		next = BTNode(closestCandidate.gn, self.goals.goalDict[closestCandidate.gn].location, closestCandidate.p, closestCandidate.d)
 		# this function removes the current goal from ext list
@@ -99,8 +103,8 @@ class BTTree():
 		#print("stepping...", closestCandidate.gn)
 
 		# check for new exterior goal nodes and add 'em in
+		# For each posrequisite (parent) goal of the selected goal...
 		for n in self.goals.goalDict[closestCandidate.gn].post:
-			# each parent goal of the selected goal
 			if(self.goals.goalDict[n].isExterior(next.extGoalNames)):
 				#print("is exterior: ", n)
 				next.extGoalNames.append(n)
