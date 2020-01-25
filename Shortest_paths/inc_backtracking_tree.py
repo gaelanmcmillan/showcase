@@ -74,12 +74,15 @@ class BTTree():
 		msg += "There are " + str(len(self.candidates)) + " total candidate(s):\n"
 		for c in self.candidates:
 			msg += c.gn + " from " + c.p.goalName + ": " + str(c.d-c.p.distance) + "\n"
-		#print(msg)
+		
+		# Progress Report print(msg) for debugging
+		# print(msg)
 
 		return
 
-	# Produce the next BTTree state by stepping to a 
-	# Select a new currentNode from self.candidates and create a BTNode for it; check for completion.	
+	# Select a new currentNode from self.candidates and create a BTNode for it	
+	# Update the list of exterior nodes from the new selection
+	# Check for completion
 	def step(self):
 		# Expand before each step to produce candidates
 		self.steps += 1
@@ -101,17 +104,20 @@ class BTTree():
 		# pass values to a new completedGoals list and add the goalName
 		next.newCompletedGoalsList()
 
-		#print("stepping...", next.extGoalNames)
-		#print("stepping...", closestCandidate.p.extGoalNames)
-		#print("stepping...", closestCandidate.gn)
+		#print("stepping...")
+		#print("\tnext.extGoalNames\n\t\t", next.extGoalNames)
+		#print("\tclosestCandidate.p.extGoalNames\n\t\t", closestCandidate.p.extGoalNames)
+		#print("\tclosestCandidate.gn\n\t\t", closestCandidate.gn)
 
-		# check for new exterior goal nodes and add 'em in
-		# For each posrequisite (parent) goal of the selected goal...
-		for n in self.goals.goalDict[closestCandidate.gn].post:
-			if(self.goals.goalDict[n].isExterior(next.completedGoals)):
+		# check for new exterior goal nodes that after visiting next
+		# For each postrequisite (parent) goal of the selected goal...
+		for n in self.goals.goalDict[next.goalName].post:
+			# If the postrequisite is exterior && unique (V1.2)
+			if(self.goals.goalDict[n].isExterior(next.completedGoals) and n not in next.extGoalNames):
 				next.extGoalNames.append(n)
 		
-		# V1.3 ~ if more than one candidate has the same location, merge them.
+		# ? if more than one candidate has the same location, merge them.
+
 
 		# update the selected node for expansion
 		self.selection = next
@@ -128,6 +134,7 @@ class BTTree():
 			msg = "~"
 			msg += "STEP " + str(self.steps) + ":\nmoves from " + next.parent.goalName + " to " + next.goalName + " for " + str(addDist) + ".\n"
 		
+		#Progress Report print(msg) for debugging
 		#print(msg)
 		return complete
 	

@@ -34,10 +34,6 @@ def simulPaths(g, t, s):
 	
 	# GraphNode object has .name and dictionary .adjList
 	currentNode = g.nodes[s]
-	
-	print("Starting Dijkstra", s)
-	for gob in t:
-		print("\t", gob.name, gob.location)
 
 	# Important Case: goal node is at start node
 	for gol in t:
