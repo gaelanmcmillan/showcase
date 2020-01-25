@@ -1,6 +1,7 @@
-import inc_graphing as graphs
+import inc_graphs as graphs
 import inc_goals as goals
 import inc_backtracking_tree as BT
+import inc_shortest_paths as dijkstra
 
 def contentsFromFile(filename):
 	f = open(filename, "r", 1)
@@ -10,28 +11,31 @@ def contentsFromFile(filename):
 
 print("Welcome to testing\n")
 '''
+# making the datastructures
 edgeListFilename = input("EdgeList Filename: ") #edges.txt
 start = input("Start node name: ")
 goal = input("Goal node name: ")
 '''
+# making the datastructure
+g = graphs.UndirectedGraph(contentsFromFile("edges.txt"))
+s = "s"
+t = goals.Goals(contentsFromFile("example3.txt"))
+
 # Tests
 # ##########################################
-
-#making the goal structure
-g = graphs.makeUndirectedGraph(contentsFromFile("edges.txt"))
-s = "s"
-t = goals.makeGoals(contentsFromFile("example3.txt"))
-
-#print the goal structure
-#print("Exterior Nodes: ", t.ext, "\n")
-#for x in t.goalDict:
-	#print("Name:\t\t", t.goalDict[x].name)
-	#print("Location:\t", t.goalDict[x].location)
-	#print("Parents:\t", t.goalDict[x].post)
-	#print("Children:\t", t.goalDict[x].pre, "\n")
-
-#test 
 '''
+# TEST making the datastructures
+print the goal structure
+print("Exterior Nodes: ", t.ext, "\n")
+for x in t.goalDict:
+	print("Name:\t\t", t.goalDict[x].name)
+	print("Location:\t", t.goalDict[x].location)
+	print("Parents:\t", t.goalDict[x].post)
+	print("Children:\t", t.goalDict[x].pre, "\n")
+'''
+
+'''
+# TEST simulPaths, Dijkstra's algorithm inc_shortest_paths.py
 searchGoals = []
 for gol in t.ext:
 	searchGoals.append(t.goalDict[gol])

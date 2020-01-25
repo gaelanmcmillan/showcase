@@ -1,42 +1,67 @@
-import math
+# V1.2 Moving variables .distance and .prev over from inc_graphs.py
+# V1.3 Updating for directed graphs
 
-# g is the graph, t is a list of goal objects, and s is sttart location
+import math
+# import inc_graphs as graphs
+
+# g is the graph, t is a list of goal objects, and s is start location (string)
+# goal objects have variables .name and .location, where .location is in the graph g
+# t can be modified but not g or s
+# return a dictionary indexed by goalNames storing the distances to each goal.
 def simulPaths(g, t, s):
 	# Dijkstra's Algorithm
+	distance = {}
+	prev = {} # store the paths if you want
 	unvisited = []
-	unvisited = list(g.distance.keys())
+
+	# initialize wrt graph g
+	for n in g.nodeNames:
+		distance[n] = math.inf
+		prev[n] = ""
+		unvisited.append(n)
+
+	# distance is zero at the start
+	distance[s] = 0
+	# mandatory false prev value for prev[start]
+	prev[s] = s
+	# remove start node from unvisited nodes
 	unvisited.remove(s)
 	
-	for i in g.distance:
-		g.distance[i] = math.inf
-	g.distance[s] = 0
-
-	for i in g.prev:
-		g.prev[i] = ""
-	#mandatory false prev value for prev[start]
-	g.prev[s] = s
-	
-	# return distances to goal locations
+	# r is the results dictionary
 	r = {}
-	for x in t:
-		r[x.name] = math.inf
+	for gol in t:
+		r[gol.name] = math.inf
 	
+	# GraphNode object has .name and dictionary .adjList
 	currentNode = g.nodes[s]
 	
+	print("Starting Dijkstra", s)
+	for gob in t:
+		print("\t", gob.name, gob.location)
+
+	# Important Case: goal node is at start node
+	for gol in t:
+		if(currentNode.name == gol.location):
+			r[gol.name] = 0 # distance 0
+			t.remove(gol)
+			# Check for completion
+			if(t == []):
+				return r
+
 	while(unvisited != []):
-		#update distance for each adjacent node
+		# update distance for each adjacent node
 		for x in list(currentNode.adjList.keys()):
-			if(g.distance[currentNode.name] + g.weight(currentNode.name,x) < g.distance[x]):
-				g.distance[x] = g.distance[currentNode.name] + g.weight(currentNode.name, x)
-				g.prev[x] = currentNode.name
+			if(distance[currentNode.name] + g.weight(currentNode.name,x) < distance[x]):
+				distance[x] = distance[currentNode.name] + g.weight(currentNode.name, x)
+				prev[x] = currentNode.name
 
 		#select the closest unvisited node
 		minDist = math.inf
 		candidate = "__SOUND__"
 		for x in unvisited:
-			if(g.distance[x] < minDist):
+			if(distance[x] < minDist):
 				candidate = x
-				minDist = g.distance[x]
+				minDist = distance[x]
 		
 		# check for unselectability
 		if(candidate == "__SOUND__"):
@@ -49,10 +74,13 @@ def simulPaths(g, t, s):
 		currentNode = g.nodes[candidate]
 		
 		# check for completion
-		# t stands for sinks, r is resturlnts.
-		for x in t:
-			if(currentNode.name == x.location):
-				r[x.name] = g.distance[x.location]
-				t.remove(x)
+		# t stands for sinks, r is results.
+		for gol in t:
+			if(currentNode.name == gol.location):
+				r[gol.name] = distance[gol.location]
+				t.remove(gol)
 				if(t == []):
 					return r
+	print("ERROR: in file inc_shortest_paths.py  . . .")
+	print("All nodes have been visited.")
+	quit()
