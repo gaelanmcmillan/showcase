@@ -73,10 +73,10 @@ class BTTree():
 
 		msg += "There are " + str(len(self.candidates)) + " total candidate(s):\n"
 		for c in self.candidates:
-			msg += c.gn + " from " + c.p.goalName + ": " + str(c.d-c.p.distance) + "\n"
+			msg += "\t" + c.gn + " from " + c.p.goalName + ": " + str(c.d-c.p.distance) + "\tTotal distance: " + str(c.d) + "\n"
 		
 		# Progress Report print(msg) for debugging
-		# print(msg)
+		#print(msg)
 
 		return
 
@@ -127,22 +127,26 @@ class BTTree():
 		if(self.isComplete()):
 			addDist = next.distance - next.parent.distance
 			msg = "STEP " + str(self.steps) + ":\nmove from " + next.parent.goalName + " to " + next.goalName + " for " + str(addDist) + ".\n"
-			msg += "Complete: No more exterior nodes in " + str(self.steps) + " steps."
+			msg += "Complete in " + str(self.steps) + " steps."
 			complete = True
 		else:
 			addDist = next.distance - next.parent.distance
 			msg = "~"
 			msg += "STEP " + str(self.steps) + ":\nmoves from " + next.parent.goalName + " to " + next.goalName + " for " + str(addDist) + ".\n"
 		
-		#Progress Report print(msg) for debugging
+		# Progress Report print(msg) for debugging
 		#print(msg)
 		return complete
 	
 	# Return True if the structure is in a stopping state.
 	def isComplete(self):
-		if(self.selection.extGoalNames == []):
-			return True
-		return False
+		# For each goal...
+		for originalGoal in self.goals.goalDict.keys():
+			# Return false if the goal is not complete.
+			if(originalGoal not in self.selection.completedGoals):
+				return False
+		# All goals are complete
+		return True
 
 	def displayRoute(self):
 		printout = []

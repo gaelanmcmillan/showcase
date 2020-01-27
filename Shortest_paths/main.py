@@ -1,3 +1,5 @@
+# V if needed, add printout for routes between goals
+
 import inc_graphs as graphs
 import inc_goals as goals
 import inc_backtracking_tree as BT
@@ -9,17 +11,25 @@ def contentsFromFile(filename):
 	f.close()
 	return contents
 
-print("Welcome to testing\n")
+print("\n\nWelcome to testing")
+edgesFilename = "edges.txt"
+goalsFilename = "example4.txt"
+start = "s"
+
 '''
-# making the datastructures
-edgeListFilename = input("EdgeList Filename: ") #edges.txt
-start = input("Start node name: ")
-goal = input("Goal node name: ")
+# instanciate the datastructures
+edgesFilename = input("Name a edge list file: ") #edges.txt
+goalsFilename = input("Name a goal list file: ") #examples.txt
+start = input("Name a starting node: ")
 '''
-# making the datastructure
-g = graphs.UndirectedGraph(contentsFromFile("edges.txt"))
-s = "s"
-t = goals.Goals(contentsFromFile("example3.txt"))
+
+# instanciate the datastructures
+g = graphs.UndirectedGraph(contentsFromFile(edgesFilename))
+s = start
+t = goals.Goals(contentsFromFile(goalsFilename))
+
+print("\t Graph file: ", edgesFilename)
+print("\t Goals file: ", goalsFilename)
 
 # Tests
 # ##########################################
