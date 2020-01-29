@@ -7,27 +7,27 @@ To explore syntax and semantics in various prevalent programming languages and s
 The following languages are on my hit-list: Haskell, Ruby, Python, Java, Javascript, C, C++, and C#.
 
 ## FizzBuzz Problem Definition 
-To solve FizzBuzz, write a program that prints out the numbers 1 to 100, with one number per line. 
-Exceptions: 
-If any number is divisible by 3, print "Fizz" instead. 
-If any number is divisible by 5, print "Buzz" instead.
-If any number is divisible by both 3 and 5, print "FizzBuzz."
+To solve FizzBuzz, write a program that prints out the numbers 1 to 100, with one number per line.   
+Exceptions:   
+If any number is divisible by 3, print "Fizz" instead.  
+If any number is divisible by 5, print "Buzz" instead.  
+If any number is divisible by both 3 and 5, print "FizzBuzz."  
 To see what a correct solution looks like, refer to the file, "solution.txt"
 
 ## Index
 What follows is a list of all the FizzBuzz source files in this directory. The list item has compilation notes or notes about development that are not commented into the files themselves.
 
 ### FizzBuzz.java
-Compile with "javac FizzBuzz.java"
-Run with "java FizzBuzz"
-If you can't run the file, try removing the package declaration.
+Compile with "javac FizzBuzz.java"  
+Run with "java FizzBuzz"  
+If you can't run the file, try removing the package declaration.  
 FizzBuzz.java outputs to the console rather than a file.
 
 ### FizzBuzz.c
-The C solution is so-far incomplete. The completed version will output to a file.
-Compile with "gcc FizzBuzz.c -o FizzBuzz"
-Run the executable FizzBuzz.exe
-(use "./FizzBuzz" onm Windows 10)
+The C solution is incomplete. The completed version will output to a file.  
+Compile with "gcc FizzBuzz.c -o FizzBuzz"  
+Run the executable FizzBuzz.exe  
+(use "./FizzBuzz" on Windows 10)  
 
 ### FizzBuzz.cs
 incomplete.
