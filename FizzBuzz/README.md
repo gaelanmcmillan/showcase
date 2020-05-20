@@ -20,14 +20,7 @@ What follows is a list of all the FizzBuzz source files in this directory. The l
 # FizzBuzz.java
 Compile with "javac FizzBuzz.java"
 Run with "java FizzBuzz"
-If you can't run the file, try removing the package declaration.
-FizzBuzz.java outputs to the console rather than a file.
+FizzBuzz.java outputs to the console.
+Note to self, if I run this file using the command-line, then I can't have a line, "package FizzBuzz." If I compile and run using the IDE, then I need to include "package FizzBuzz."
+VSCode produces an annoying red text whenever I remove the package.
 
-# FizzBuzz.c
-The C solution is so-far incomplete. The completed version will output to a file.
-Compile with "gcc FizzBuzz.c -o FizzBuzz"
-Run the executable FizzBuzz.exe
-(use "./FizzBuzz" onm Windows 10)
-
-# FizzBuzz.cs
-incomplete.

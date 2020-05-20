@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
 
     // store the result of strcmp
     int comparison = 0;
-    // error line in case the foles are unidentical
+    // error line in case the files are unidentical
     int flag = 0;
 
     for(int i=0; i<100; i++){

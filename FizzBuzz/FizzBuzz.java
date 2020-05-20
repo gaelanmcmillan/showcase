@@ -10,8 +10,6 @@ PURPOSE:    Print out numbers 1 to 100. For each number,
         one number per line.
 */
 
-package FizzBuzz;
-
 public class FizzBuzz {
     public static void main(String[] args){
         boolean FizzOrBuzz = false;
