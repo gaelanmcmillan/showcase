@@ -1,3 +1,5 @@
+package FizzBuzz;
+
 /*
 NAME:       FizzBuzz.java
 DATE:       1/29/2020
