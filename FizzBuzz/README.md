@@ -17,7 +17,6 @@ To see what a correct solution looks like, refer to the file, "solution.txt"
 ## Index
 What follows is a list of all the FizzBuzz source files in this directory. The list item has compilation notes or notes about development that are not commented into the files themselves.
 
-<<<<<<< HEAD
 # FizzBuzz.java
 Compile with "javac FizzBuzz.java"
 Run with "java FizzBuzz"
@@ -25,19 +24,3 @@ FizzBuzz.java outputs to the console.
 Note to self, if I run this file using the command-line, then I can't have a line, "package FizzBuzz." If I compile and run using the IDE, then I need to include "package FizzBuzz."
 VSCode produces an annoying red text whenever I remove the package.
 
-=======
-### FizzBuzz.java
-Compile with "javac FizzBuzz.java"  
-Run with "java FizzBuzz"  
-If you can't run the file, try removing the package declaration.  
-FizzBuzz.java outputs to the console rather than a file.
-
-### FizzBuzz.c
-The C solution is incomplete. The completed version will output to a file.  
-Compile with "gcc FizzBuzz.c -o FizzBuzz"  
-Run the executable FizzBuzz.exe  
-(use "./FizzBuzz" on Windows 10)  
-
-### FizzBuzz.cs
-incomplete.
->>>>>>> 8643ad5fbfb6b7304d55215c8eb6c4a52cd97a19
