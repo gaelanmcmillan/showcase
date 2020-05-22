@@ -1,11 +1,12 @@
+University of Victoria
 Read this document to understand
 the assembly of this project.
 
 created by:
 Andrew Meijer
-V00805554
+V00XXXXXX
 Tyler Onyschtschuk
-V00744909
+V00XXXXXX
 
 Our solution is written in python.
 

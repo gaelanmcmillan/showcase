@@ -14,8 +14,11 @@ If any number is divisible by 5, print "Buzz" instead.
 If any number is divisible by both 3 and 5, print "FizzBuzz."  
 To see what a correct solution looks like, refer to the file, "solution.txt"
 
-## Index
+## File Reference
 What follows is a list of all the FizzBuzz source files in this directory. The list item has compilation notes or notes about development that are not commented into the files themselves.
+
+# solution.txt
+The correct solution is stored in a data file called solution.txt.
 
 # FizzBuzz.java
 Compile with "javac FizzBuzz.java"
