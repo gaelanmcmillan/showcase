@@ -1,0 +1,32 @@
+INC003 - ACTIVE - OPEN 6/3/2020 - TESTERS_OBJECT_INHERITANCE
+    6/3/2020
+    It is very important that I get this part right because testing my own test software is crucial.
+    The activity is to write an example of object inheritance that can be used to test OOP design-pattern implemetations with automated tests.
+
+INC002 - RESOLVED - CLOSED 6/3/2020 - FIRST_FILES
+    6/3/2020
+    Choose which files to start first for this project and what they will do.
+    I need to build a testing framework to test my first design-pattern.
+    Conventional design-patterns are inherently dissimilar because they are designed for specific roles.
+    Thus, I presume the testing framework must adapt to accomodate the differences between design-patters - the differences in how they need to be tested.
+    I want my testing framework to be robust. What do Factories and Decorators have in comon that can help me discover what to code for the testing framework?
+    I know, I'll use this as an example of Object Inheritance.
+    I'll close this incident and start working on object inheritance for different types of testers.
+
+INC001 - RESOLVED - CLOSED 6/3/2020 - NEW_ENTRY
+    6/3/2020
+    This is an incident ticket to explain this file: to explain incident tickets! New entries go on top.
+    NEW_ENTRY incident number 1 marks the start of this Java Objects Project.
+    Each incident has an id line including the incident ID, a status, an open/closed date, and a name, followed by a description on indented lines below.
+    I won't be loading incidentLog.txt into a program; it is just to read.
+    I'm doing this all by hand so I can make new rules if I need them, but for now consider some basic possible incident statuses.
+    ACTIVE:     incident is in progress and workable
+    WAIT:       incident is not workable or not in progress
+    RESOLVED:   incident is closed
+    CLOSED:     incident is permanently closed
+    Active incidents should have clear requirements for them to be resolved explained in the description.
+    Wait incidents should have a date in the description of when and why they were set to wait.
+    Incident descriptions should be dated.
+    If a waited or resolved incident is set to active, explain it in the description and write a REOPEN date in the id line.
+    Resolved and Closed incidents should have a close date at the end of their id line, and the description should explain.
+    I am closing this incident because I have now explained all the basic rules of the incident log.
