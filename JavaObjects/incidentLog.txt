@@ -7,9 +7,9 @@ INC002 - RESOLVED - CLOSED 6/3/2020 - FIRST_FILES
     6/3/2020
     Choose which files to start first for this project and what they will do.
     I need to build a testing framework to test my first design-pattern.
-    Conventional design-patterns are inherently dissimilar because they are designed for specific roles.
-    Thus, I presume the testing framework must adapt to accomodate the differences between design-patters - the differences in how they need to be tested.
-    I want my testing framework to be robust. What do Factories and Decorators have in comon that can help me discover what to code for the testing framework?
+    Conventional design-patterns are inherently different from one another because they are designed for specific purposes.
+    Thus, I presume the testing framework must adapt to accomodate the differences between design-patterns - the differences in how they need to be tested.
+    I want my testing framework to be robust. What do Factories and Decorators have in common that can help me discover what to code for the testing framework?
     I know, I'll use this as an example of Object Inheritance.
     I'll close this incident and start working on object inheritance for different types of testers.
 
