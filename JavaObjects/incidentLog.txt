@@ -4,7 +4,8 @@ INC003 - ACTIVE - OPEN 6/3/2020 - TESTERS_OBJECT_INHERITANCE
     The activity is to write an example of object inheritance that can be used to test OOP design-pattern implemetations with automated tests.
     I accept that implementations for different design-patterns require different tests, so I will inherit the similarities from a Tester object.
     Tester.java
-    Next, I will need to inherit from Tester.java.
+    For tests to work, test objects in the test space must inherit from 
+    ObservableObject.java
 
 INC002 - RESOLVED - CLOSED 6/3/2020 - FIRST_FILES
     6/3/2020
