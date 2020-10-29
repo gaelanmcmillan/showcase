@@ -3,7 +3,7 @@
  * AUTHOR:  Source Making
  *          https://sourcemaking.com/design_patterns/factory_method/java/1
  * DATE:    Transposed by Andrew Meijer, Oct. 6, 2020     
- * PURPOSE: 
+ * PURPOSE: Create objects by calling this factory instead of calling a constructor.
  */
 
 interface ImageReader {

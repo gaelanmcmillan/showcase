@@ -1,9 +1,9 @@
 # FizzBuzz Readme
-This project directory contains examples of FizzBuzz written in various programming languages. There are many ways to solve FizzBuzz and it is a simple problem. I have included the correct results in a file, "solution.txt."
+This project directory contains examples of FizzBuzz. There are many ways to solve FizzBuzz and it is a simple problem. I have included the correct results in a file, "solution.txt."
 I have also included a program for comparing file contents, so that I can quickly check when I have the right output. The source is in "checkSolution.c"
 
 ## Purpose
-To explore syntax and semantics in various prevalent programming languages and scripting languages. The purpose of this project is not to prove optimality of any solution or to optimize any of the solutions.
+To explore syntax and semantics in various prevalent programming languages and scripting languages in a Windows 10 VS Code environment. The purpose of this project is not to prove optimality of any solution or to optimize any of the solutions.
 The following languages are on my hit-list: Haskell, Ruby, Python, Java, Javascript, C, C++, and C#.
 
 ## FizzBuzz Problem Definition 
@@ -19,6 +19,24 @@ What follows is a list of all the FizzBuzz source files in this directory. The l
 
 # solution.txt
 The correct solution is stored in a data file called solution.txt.
+
+# checkSolution.c
+Compile with "g++ checkSolution.c -o checkSolution"
+Run the file with arguments to compare the contents of two files, "./checkSolution output.txt solution.txt" 
+where "output" is the name of the result being tested against the correct solution contained in "solution.txt".
+I have tested this program and it works by comparing the contents of each line in each file until there is a difference in one of the lines, if there is a difference.
+Therefore the output must be formatted in the same format as "solution.txt".
+
+# FizzBuzz.c
+Compile with "gc FizzBuzz.c -o FizzBuzz"
+Delete file in local directory, "output.txt"
+Run, "./FizzBuzz" to create a new output text file.
+Run, "./checkSolution output.txt solution.txt"
+Console outputs, "The solution is correct."
+
+# FizzBuzz.cpp
+Compile with "g++ FizzBuzz.cpp -o FizzBuzz"
+Run, "./FizzBuzz >> output.txt"
 
 # FizzBuzz.java
 Compile with "javac FizzBuzz.java"

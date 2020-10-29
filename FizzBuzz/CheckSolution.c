@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
         fscanf(f2p, "%s", f2LineContents);
         comparison = strcmp(f1LineContents, f2LineContents);
         if(comparison != 0){
-            flag = i;
+            flag = i+1;
             break;
         }
     }

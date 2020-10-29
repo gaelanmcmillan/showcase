@@ -1,4 +1,9 @@
-INDEV003 - ACTIVE - OPEN 6/3/2020 - TESTERS_OBJECT_INHERITANCE
+INDEV005 - ACTIVE - OPEN 10/28/2020 - PREPARE_FOR_TESTING
+    Prepare one of the sample projects for testing by producing a set of requirements for the Tester object.
+    Consider that next steps are to do the same for decorator objects to compare the requirements.
+INDEV004 - RESOLVED - CLOSED 10/6/2020 - OPEN-SOURCE_EXAMPLES
+    Download and reference source code from open-source examples on the internet and include them in "inc" directrory.
+INDEV003 - RESOLVED - CLOSED 10/28/2020 - TESTERS_OBJECT_INHERITANCE
     6/3/2020
     It is very important that I get this part right because testing my own test software is crucial.
     The activity is to write an example of object inheritance that can be used to test OOP design-pattern implemetations with automated tests.
@@ -6,7 +11,6 @@ INDEV003 - ACTIVE - OPEN 6/3/2020 - TESTERS_OBJECT_INHERITANCE
     Tester.java
     For tests to work, test objects in the test space must inherit from 
     ObservableObject.java
-
 INDEV002 - RESOLVED - CLOSED 6/3/2020 - FIRST_FILES
     6/3/2020
     Choose which files to start first for this project and what they will do.
@@ -16,7 +20,6 @@ INDEV002 - RESOLVED - CLOSED 6/3/2020 - FIRST_FILES
     I want my testing framework to be robust. What do Factories and Decorators have in common that can help me discover what to code for the testing framework?
     I know, I'll use this as an example of Object Inheritance.
     I'll close this development and start working on object inheritance for different types of testers.
-
 INDEV001 - RESOLVED - CLOSED 6/3/2020 - NEW_ENTRY
     6/3/2020
     This is  development ticket to explain this file: to explain development tickets! New entries go on top.
