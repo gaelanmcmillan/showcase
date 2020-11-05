@@ -17,28 +17,29 @@ To see what a correct solution looks like, refer to the file, "solution.txt"
 ## File Reference
 What follows is a list of all the FizzBuzz source files in this directory. The list item has compilation notes or notes about development that are not commented into the files themselves.
 
-# solution.txt
+### solution.txt
 The correct solution is stored in a data file called solution.txt.
 
-# checkSolution.c
+### checkSolution.c
 Compile with "g++ checkSolution.c -o checkSolution"
 Run the file with arguments to compare the contents of two files, "./checkSolution output.txt solution.txt" 
 where "output" is the name of the result being tested against the correct solution contained in "solution.txt".
 I have tested this program and it works by comparing the contents of each line in each file until there is a difference in one of the lines, if there is a difference.
 Therefore the output must be formatted in the same format as "solution.txt".
 
-# FizzBuzz.c
+### FizzBuzz.c
 Compile with "gc FizzBuzz.c -o FizzBuzz"
 Delete file in local directory, "output.txt"
 Run, "./FizzBuzz" to create a new output text file.
 Run, "./checkSolution output.txt solution.txt"
 Console outputs, "The solution is correct."
 
-# FizzBuzz.cpp
+### FizzBuzz.cpp
 Compile with "g++ FizzBuzz.cpp -o FizzBuzz"
 Run, "./FizzBuzz >> output.txt"
 
-# FizzBuzz.java
+### FizzBuzz.java
+DEPRECATED
 Compile with "javac FizzBuzz.java"
 Run with "java FizzBuzz"
 FizzBuzz.java outputs to the console.

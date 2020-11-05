@@ -3,6 +3,8 @@ package FizzBuzz;
 /*
 NAME:       FizzBuzz.java
 DATE:       1/29/2020
+            2020/11/05 - As of September 2020, my JDK is out of date and I am no longer doing java development at this time.
+                         I believe this program ran correctly when it was written, but now I will move on to test other languages.
 AUTHOR:     Andrew Meijer
 PURPOSE:    Print out numbers 1 to 100. For each number,
         if the number is divisible by 3, print "Fizz."
