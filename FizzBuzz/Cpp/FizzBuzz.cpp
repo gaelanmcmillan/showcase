@@ -12,7 +12,7 @@ int fizzBuzz(int n, short f) {
 
     f = 0;
     
-    if(n%3 == 0){
+    if(n % 3 == 0){
         std::cout << "Fizz";
         f = 1;
     }
