@@ -1,8 +1,20 @@
 # Backtracking Recursion Readme
-This project is a repository for investigation into backtracking and recursion using the C language. Backtracking is an algorithm that uses recursion to efficiently solve a problem, but what is backtracking exactly, and how can it be done without recursion? Prove that recursion is either necessary or unncessary in the context of backtracking.
+## Project Description
+Backtracking is an algorithm that uses recursion and can efficiently solve Constraint Satisfaction Problems (CSP). I hypothesise that iterative algorithms cannot solve CSP as efficiently as recursive backtracking algorithms. The purpose of this project is to build from scratch two algorithms to solve CSP: a recursive backtracking algorithm and an iterative algorithm, and to prove or disprove if possible the above hypothesis.
+
+## Recursion
+An algorithm is recursive if 
+
+## Backtracking
+
+
+## Iteration
+
+
+## CSP
+CSP include three categories of data: variables, domains, and constrains.
 
 ## File Directory
-
-# Activity Log
+### Activity Log
 activityLog.txt
-The activity log stores entries that record my progress in the completion of this project.
+The activity log is filled with numbered entries that record progress in the completion of this project.

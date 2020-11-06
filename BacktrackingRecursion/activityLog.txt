@@ -1,19 +1,21 @@
-INDEV003: include Prototype1 in Readme
-    2020-11-05  :   Opened
+INDEV003: include Prototype1 in Readme - Open
+    2020-11-05  :   Entry Created
     2020-11-05  :   Write a paragraph summary of the first prototype, which will be recursive.
     Later prototypes will require one recursive algorithm and one iterative algorithm to compare space and time efficiency.
     This first prototype will only include the recursive example of backtracking.
-                :
+        :
 
-INDEV002: Define Terms
-    2020-11-05  :   Opened
+INDEV002: Define Terms - Open
+    2020-11-05  :   Entry Created
     2020-11-05  :   The readme should include a section to explain each of the two terms, recursion and backtracking.
     Consider the type of problem that backtracking is made to solve and how that type of problem can be represented simply.
     If it turns out that Backtracking is codeword for something like NP-Hard, this project will become a study of various algorithms for that class of problems, and I will pivot the project description.
-                :
+    2020-11-06  :   It turns out that Backtracking is used to solve CSP, so I have updated the readme accordingly.
+    Now I will need to include definitions for Iteration, Backtracking, Recursion, and CSP.
+        :
 
-INDEV001: Update Project Description
-    2020-11-05  :   Opened
+INDEV001: Update Project Description - Closed
+    2020-11-05  :   Entry Created
     2020-11-05  :   The project description at the top of the readme should include mention of the possibility that no proof can be found.
-                :
+    2020-11-06  :   Closed Complete
 
