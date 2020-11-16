@@ -1,18 +1,33 @@
-INDEV003: include Prototype1 in Readme - Open
+INDEV006: Add Instructions - Open
+    2020-11-15  :   Entry Created
+    2020-11-15  :   Now that there are header files, remember to create compilation instructions in the Readme!
+
+INDEV005: Rewrite Readme - Closed
+    2020-11-15  :   Entry Created
+    2020-11-15  :   Rewrite the README according to the new scope of the project, to write 2 nxnQueens solutions.
+    2020-11-14  :   Closed Complete
+
+INDEV004: Pivot Project - Open
+    2020-11-15  :   Entry Created
+    2020-11-15  :   Maintain the new vision for the project is to create two files that solve nxnQueens, one with structs and one with classes. Glhf; let's make this quick.
+    2020-11-15  :   I have experienced a VS Code warning while writing structs in C, "incomplete type is not allowed."
+                    I believe I must create a header file for this!
+
+INDEV003: include Prototype1 in Readme - Closed
     2020-11-05  :   Entry Created
     2020-11-05  :   Write a paragraph summary of the first prototype, which will be recursive.
     Later prototypes will require one recursive algorithm and one iterative algorithm to compare space and time efficiency.
     This first prototype will only include the recursive example of backtracking.
-        :
+    2020-11-15  :   CLosed Abandoned
 
-INDEV002: Define Terms - Open
+INDEV002: Define Terms - Closed
     2020-11-05  :   Entry Created
     2020-11-05  :   The readme should include a section to explain each of the two terms, recursion and backtracking.
     Consider the type of problem that backtracking is made to solve and how that type of problem can be represented simply.
     If it turns out that Backtracking is codeword for something like NP-Hard, this project will become a study of various algorithms for that class of problems, and I will pivot the project description.
     2020-11-06  :   It turns out that Backtracking is used to solve CSP, so I have updated the readme accordingly.
     Now I will need to include definitions for Iteration, Backtracking, Recursion, and CSP.
-        :
+    2020-11-15  :   Closed Abandoned
 
 INDEV001: Update Project Description - Closed
     2020-11-05  :   Entry Created
