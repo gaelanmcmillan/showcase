@@ -1,12 +1,13 @@
 INDEV007: General Progress - Open
-    2020-12-13  :   Removed unnevessary Cpp header files. Headerfiles are for when a class is being used for multiple source files; I don't need that.
+    2020-12-13  :   Removed unnecessary Cpp header files. Headerfiles are for when a class is being used for multiple source files; I don't need that.
     2020-12-13  :   Updated Readme with notes about compilation
     2020-12-13  :   Decided to include testing results as part of project
     2020-12-13  :   Work in progress...
 
-INDEV006: Add Instructions - Open
+INDEV006: Add Instructions - Closed
     2020-11-15  :   Entry Created
     2020-11-15  :   Now that there are header files, remember to create compilation instructions in the Readme!
+    2020-12-13  :   CLosed Complete
 
 INDEV005: Rewrite Readme - Closed
     2020-11-15  :   Entry Created
