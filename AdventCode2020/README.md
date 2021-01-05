@@ -1,6 +1,8 @@
 # Advent Code Advent Calendar 2020
 ## Project Description
 Solve the codes!
+In 2020, I have no solutions for AdventCode!
+I only have a single attempt at the entry puzzle and it doesn't give the correct solution (apparently). What an embarrassment!
 
 
 ## Source Files

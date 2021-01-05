@@ -1,8 +1,16 @@
-INDEV007: General Progress - Open
+INDEV008: Make a Linked List - Open
+    2021-01-04  :   To establish working syntax for structs, I will first encode a linkedlist solution before moving on to backtracking.
+    2021-01-04  :   The C linked list is now complete, but it was producing a warning: incompatible implicit declaration of built-in function 'malloc'
+                    This is because I neglected to include <stdlib.h>
+    2021-01-05  :   Making a linked list in C++ should be much easier. Those pointers are confusing!
+
+
+INDEV007: Test Results File - Open
     2020-12-13  :   Removed unnecessary Cpp header files. Headerfiles are for when a class is being used for multiple source files; I don't need that.
     2020-12-13  :   Updated Readme with notes about compilation
-    2020-12-13  :   Decided to include testing results as part of project
-    2020-12-13  :   Work in progress...
+    2020-12-13  :   Decided to include testing results as part of project.
+    2020-12-13  :   Work in progress... 
+    2021-01-04  :   
 
 INDEV006: Add Instructions - Closed
     2020-11-15  :   Entry Created
@@ -14,11 +22,12 @@ INDEV005: Rewrite Readme - Closed
     2020-11-15  :   Rewrite the README according to the new scope of the project, to write 2 nxnQueens solutions.
     2020-11-14  :   Closed Complete
 
-INDEV004: Pivot Project - Open
+INDEV004: Pivot Project - Closed
     2020-11-15  :   Entry Created
     2020-11-15  :   Maintain the new vision for the project is to create two files that solve nxnQueens, one with structs and one with classes. Glhf; let's make this quick.
     2020-11-15  :   I have experienced a VS Code warning while writing structs in C, "incomplete type is not allowed."
-                    I believe I must create a header file for this!
+                    I may need to create a header file for this!
+    2021-01-04  :   Closed Complete
 
 INDEV003: include Prototype1 in Readme - Closed
     2020-11-05  :   Entry Created
