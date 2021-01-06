@@ -3,7 +3,7 @@
 Solve the codes!
 In 2020, I have no solutions for AdventCode!
 I only have a single attempt at the entry puzzle and it doesn't give the correct solution (apparently). What an embarrassment!
-
+Deprecated Project!
 
 ## Source Files
 ### EntryPuzzle.c
