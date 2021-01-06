@@ -1,9 +1,9 @@
-INDEV008: Make a Linked List - Open
+INDEV008: Make a Linked List - Closed
     2021-01-04  :   To establish working syntax for structs, I will first encode a linkedlist solution before moving on to backtracking.
     2021-01-04  :   The C linked list is now complete, but it was producing a warning: incompatible implicit declaration of built-in function 'malloc'
                     This is because I neglected to include <stdlib.h>
     2021-01-05  :   Making a linked list in C++ should be much easier. Those pointers are confusing!
-
+    2021-01-06  :   Closed Complete
 
 INDEV007: Test Results File - Open
     2020-12-13  :   Removed unnecessary Cpp header files. Headerfiles are for when a class is being used for multiple source files; I don't need that.
